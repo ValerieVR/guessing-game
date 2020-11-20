@@ -1,7 +1,7 @@
 (function() {
 
    // generate random integer
-   let generateRandomInt = (min, max) => Math.floor(Math.random() * min - max + 1) + min;
+   let generateRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
    // generate secret number between 1 and 22
    let generateSecretNum = () => {
@@ -19,20 +19,26 @@
    }
 
    // compare user's input with secret number
-   let compareNumbers = () => {
+   let compareNumbers = (event) => {
+
+       event.preventDefault();
 
        let secretNum = generateSecretNum();
        let userNum = document.getElementById("guess").value;
 
        if (userNum == secretNum) {
-            alert(getMessage(userNum, secretNum, 0));
+           alert(getMessage(userNum, secretNum, 0));
        } else if (userNum == secretNum + 1 || userNum == secretNum - 1) {
-            alert(getMessage(userNum, secretNum, 1));
+           alert(getMessage(userNum, secretNum, 1));
        } else {
-            alert(getMessage(userNum, secretNum, 2));
+           alert(getMessage(userNum, secretNum, 2));
        };
 
      }
+
+    let form = document.getElementById("userInput");
+
+    form.addEventListener("submit", compareNumbers);
 
 }());
 
