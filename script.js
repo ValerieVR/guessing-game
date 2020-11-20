@@ -20,27 +20,24 @@
 
    // compare user's input with secret number
    let compareNumbers = (event) => {
+       
+    event.preventDefault();
 
-       event.preventDefault();
+    let secretNum = generateSecretNum();
+    let userNum = document.getElementById("guess").value;
 
-       let secretNum = generateSecretNum();
-       let userNum = document.getElementById("guess").value;
-
-       if (userNum == secretNum) {
-           alert(getMessage(userNum, secretNum, 0));
-       } else if (userNum == secretNum + 1 || userNum == secretNum - 1) {
-           alert(getMessage(userNum, secretNum, 1));
-       } else {
-           alert(getMessage(userNum, secretNum, 2));
-       };
-
-     }
+    if (userNum == secretNum) {
+        alert(getMessage(userNum, secretNum, 0));
+    } else if (userNum == secretNum + 1 || userNum == secretNum - 1) {
+        alert(getMessage(userNum, secretNum, 1));
+    } else {
+        alert(getMessage(userNum, secretNum, 2));
+    };
+   }
 
      // compare numbers when form gets submitted
      let form = document.getElementById("userInput");
      form.addEventListener("submit", compareNumbers);
-
-    
 
 }());
 
