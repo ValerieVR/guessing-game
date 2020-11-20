@@ -11,9 +11,9 @@
 
    // Messages to display
    let getMessage = (guess, secret, i) => {
-       let win = "Awesome! Your number, " + guess + ", was correct.";
-       let close = "So close, but you misse it. The secret number is " + secret + ".";
-       let lose = "Bummer ... You guessed " + guess + " and the secret number was " + secret + ".";
+       let win = "Awesome! Your number, " + guess + ", is correct.";
+       let close = "So close, but you missed it. The secret number is " + secret + ".";
+       let lose = "Bummer ... You guessed " + guess + " and the secret number is" + secret + ".";
        let message = [win, close, lose];
        return message[i];
    }
