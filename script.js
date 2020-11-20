@@ -9,7 +9,7 @@
        return secretNum;
    }
 
-   // declare messages to display
+   // Messages to display
    let getMessage = (guess, secret, i) => {
        let win = "Awesome! Your number, " + guess + ", was correct.";
        let close = "So close, but you misse it. The secret number is " + secret + ".";
@@ -18,10 +18,21 @@
        return message[i];
    }
 
-   
+   // compare user's input with secret number
+   let compareNumbers = () => {
 
+       let secretNum = generateSecretNum();
+       let userNum = document.getElementById("guess").value;
 
-    
+       if (userNum == secretNum) {
+            alert(getMessage(userNum, secretNum, 0));
+       } else if (userNum == secretNum + 1 || userNum == secretNum - 1) {
+            alert(getMessage(userNum, secretNum, 1));
+       } else {
+            alert(getMessage(userNum, secretNum, 2));
+       };
+
+     }
 
 }());
 
