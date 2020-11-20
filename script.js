@@ -36,9 +36,11 @@
 
      }
 
-    let form = document.getElementById("userInput");
+     // compare numbers when form gets submitted
+     let form = document.getElementById("userInput");
+     form.addEventListener("submit", compareNumbers);
 
-    form.addEventListener("submit", compareNumbers);
+    
 
 }());
 
