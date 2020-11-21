@@ -1,25 +1,25 @@
 (function() {
 
-   // generate random integer
-   let generateRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+    // generate random integer
+    let generateRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
-   // generate secret number between 1 and 22
-   let generateSecretNum = () => {
+    // generate secret number between 1 and 22
+    let generateSecretNum = () => {
        let secretNum = generateRandomInt(1, 22);
        return secretNum;
-   }
+    }
 
-   // Messages to display
-   let getMessage = (guess, secret, i) => {
-       let win = "Awesome! Your number, " + guess + ", is the secret number.";
-       let close = "So close, but you missed it. The secret number is " + secret + ".";
-       let lose = "Bummer ... You guessed " + guess + " and the secret number is " + secret + ".";
-       let message = [win, close, lose];
-       return message[i];
-   }
+    // Messages to display
+    let getMessage = (guess, secret, i) => {
+        let win = "Awesome! Your number, " + guess + ", is the secret number.";
+        let close = "So close, but you missed it. The secret number is " + secret + ".";
+        let lose = "Bummer ... You guessed " + guess + " and the secret number is " + secret + ".";
+        let message = [win, close, lose];
+        return message[i];
+    }
 
-   // compare user's input with secret number
-   let compareNumbers = (event) => {
+    // compare user's input with secret number
+    let compareNumbers = (event) => {
        
     event.preventDefault();
 
