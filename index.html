@@ -7,21 +7,19 @@
     <title>Guessing Game</title>
 </head>
 <body> 
-    <div id="gamebox"> 
+    <div id="game-container"> 
         <header>
             <h1>GUESSING GAME</h1>
         </header>
         <main>
             <p>Can you guess the secret number between 1 and 22?</p>
-            <div id="form-container">
-                <form action="#" method="GET" id="userInput">
-                    <input type="number" min=1 max=22 id="guess" name="guess" placeholder="Your guess:" 
-                    required   
-                    oninvalid="this.setCustomValidity('Fill in a number between 1 and 22!')" 
-                    oninput="setCustomValidity('')"><br><br>
-                    <input type="submit" id="button" value="PLAY NOW">
-                </form>
-            </div>
+            <form action="#" method="GET" id="userInput">
+                <input type="number" min=1 max=22 id="guess" name="guess" placeholder="Your guess:" 
+                required   
+                oninvalid="this.setCustomValidity('Fill in a number between 1 and 22!')" 
+                oninput="setCustomValidity('')"><br><br>
+                <input type="submit" id="button" value="PLAY NOW">
+            </form>
         </main>
     </div>
     <script src="script.js"></script>

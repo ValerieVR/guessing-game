@@ -9,7 +9,7 @@ body {
     text-align: center;
 }
 
-#gamebox {
+#game-container {
     background-color: #525d6d;
     border-style: solid;
     padding: 40px;
