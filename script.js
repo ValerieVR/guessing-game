@@ -9,7 +9,7 @@
        return secretNum;
     }
 
-    // Messages to display
+    // messages to display
     let getMessage = (guess, secret, i) => {
         let win = "Awesome! Your number, " + guess + ", is the secret number.";
         let close = "So close, but you missed it! The secret number is " + secret + ".";
