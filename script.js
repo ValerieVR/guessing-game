@@ -19,9 +19,7 @@
     }
 
     // compare user's input with secret number
-    let compareNumbers = (event) => {
-       
-    event.preventDefault();
+    let compareNumbers = () => {
 
     let secretNum = generateSecretNum();
     let userNum = document.getElementById("guess").value;
